@@ -1,0 +1,24 @@
+.details{
+    background-color:#72aaff;
+    color: #FFF;
+    border: 0px;
+    border-radius: 12px;
+    padding: 5px 15px;
+    font-size: 12px;
+    box-shadow:rgb(81 107 152 / 15%) 0px 4px 18px;
+  }
+  .details:hover{
+    color: #72aaff;
+    background-color: #FFF;
+  
+  }
+  .timer{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .error-class{
+      margin-top: 50px;
+  }

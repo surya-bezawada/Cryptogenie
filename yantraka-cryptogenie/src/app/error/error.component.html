@@ -1,0 +1,20 @@
+<div class='text-center error-class'>
+
+    <h3>Oops! Something went wrong!</h3>
+
+
+    <div class="">
+        <p class="">
+            Please wait for 5 minutes before you click on <button class='btn details fw-bold' (click)="reLoad()" [disabled]='!this.setReload'>Reload!</button>
+        </p>
+        <div class="timer">
+            <p class="" id="minutes">
+                {{ addZero(minutesToDday) }}
+            </p>
+            <p class="">:</p>
+            <p class="" id="seconds">
+                {{ addZero(secondsToDday) }}
+            </p>
+        </div>
+    </div>
+</div>

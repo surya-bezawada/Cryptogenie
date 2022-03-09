@@ -1,0 +1,8 @@
+
+    {
+        "/api/*": {
+            "target": "https://cryptogenie.yantraka.ai",
+            "secure": false,
+            "logLevel": "debug"
+        }
+    }

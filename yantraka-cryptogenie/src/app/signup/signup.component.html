@@ -1,0 +1,155 @@
+<div class="container-fluid pt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-5">
+      <div class="img-one">
+        <img
+          class="img-fiuld"
+          src="../../assets/CryptoGenie Logo.svg"
+          width="100%"
+          alt=""
+        />
+        <div class="img-two">
+          <img src="../../assets/Logo.svg" width="50%" alt="" />
+          <p>Register now to unlock possibilities of crypto predictions</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-5 pt-3">
+      <h2>Sign Up</h2>
+      <div class="socialmedia">
+        <div class="row">
+          <div class="col-6 mb-3">
+            <button class="google">
+              <img src="../../assets/Google.svg" alt="" /> Sign up with Google
+            </button>
+          </div>
+          <div class="col-6 mb-3">
+            <button class="google">
+              <img src="../../assets/path18.svg" alt="" />
+              Sign up with Linkedin
+            </button>
+          </div>
+        </div>
+      </div>
+      <hr class="hr-text" data-content="OR" size="1" />
+      <form [formGroup]="frmSignup" #f="ngForm" (ngSubmit)="submit()">
+        <div class="validation-box">
+          
+            
+           
+            
+           
+            
+        </div>
+        
+
+        <div class="form-inputs mt-3">
+          <div class="personal">
+            <div class="row">
+              <div class="col-6 mb-3">
+                <p class='privacy-text m-0'
+                *ngIf="frmSignup.controls['firstname'].hasError('required') && frmSignup.controls['firstname'].touched"
+                style="color: red;">First Name field can't be empty </p>
+                <input
+                  formControlName="firstname"
+                  type="text"
+                  class="form-control tt"
+                  [ngClass]="
+                    frmSignup.controls['firstname'].invalid ? 'is-invalid' : ''
+                  "
+                  placeholder="First *"
+                />
+              </div>
+              <div class="col-6 mb-3">
+                <p class='privacy-text m-0'
+                *ngIf="frmSignup.controls['lastname'].hasError('required') && frmSignup.controls['lastname'].touched"
+                style="color: red;">Last Name field can't be empty </p>
+                <input
+                  formControlName="lastname"
+                  type="text"
+                  class="form-control tt"
+                  [ngClass]="
+                    frmSignup.controls['lastname'].invalid ? 'is-invalid' : ''
+                  "
+                  placeholder="Last*"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <p class='privacy-text m-0'
+                *ngIf="frmSignup.controls['email'].hasError('required') && frmSignup.controls['email'].touched"
+                style="color: red;">Email format is not valid </p>
+            
+            <input
+              formControlName="email"
+              type="email"
+              class="form-control tt"
+              [ngClass]="
+                frmSignup.controls['email'].invalid ? 'is-invalid' : ''
+              "
+              placeholder="Mail Address*"
+            />
+          </div>
+          <div class="mb-3">
+            <p class='privacy-text m-0'
+            *ngIf="frmSignup.controls['password'].hasError('required') && frmSignup.controls['password'].touched"
+            style="color: red;">Password field can't be empty </p>
+           
+            <input
+              formControlName="password"
+              type="password"
+              class="form-control tt"
+              [ngClass]="
+                frmSignup.controls['password'].invalid ? 'is-invalid' : ''
+              "
+              placeholder="Create your password *"
+            />
+          </div>
+          <div class="mb-3">
+            <p class='privacy-text m-0'
+                *ngIf="frmSignup.controls['confirmPassword'].hasError('required') && frmSignup.controls['confirmPassword'].touched"
+                style="color: red;">Confirm password field can't be empty </p>
+            <p class='privacy-text m-0'
+                *ngIf="frmSignup.controls['confirmPassword'].hasError('NoPassswordMatch') && frmSignup.controls['confirmPassword'].touched"
+                style="color:red">password and confirmed password did not match</p>
+            
+            <input
+              formControlName="confirmPassword"
+              type="password"
+              class="form-control tt"
+              [ngClass]="
+                frmSignup.controls['confirmPassword'].invalid
+                  ? 'is-invalid'
+                  : ''
+              "
+              placeholder="Confirm your Password *"
+            />
+          </div>
+
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >By accepting your agree to Yantraka.AI's
+              <a href="" class="tick-label">Terms of Use & Privacy Policy </a>
+            </label>
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="submit">
+              Create account
+            </button>
+          </div>
+          <div class="text-center pt-5" (click)="loginWithRedirect()">
+            Already a user?
+            <a href="" class="signin">Sign In</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

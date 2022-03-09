@@ -1,0 +1,26 @@
+<div id="app">
+  <div class="container pt-4">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="assets/Logo.svg" class="img-fluid" alt="" >
+      </div>
+      <div *ngIf="(auth.isAuthenticated$ | async) === false"
+        class=" col-sm-6 d-flex justify-content-end">
+        <p class="m-0">
+          <a href="/signup"><button class="btn btn-primary sts">Sign Up</button></a>
+        </p>
+        <p class="m-0">
+          <button (click)="loginWithRedirect()" class="btn btn-primary">
+            Sign In
+          </button>
+        </p>
+      </div>
+    </div>
+    <div *ngIf="(auth.isAuthenticated$ | async) === true">
+      <p class="col-sm-2 m-0">
+        <button (click)="logout()" class="btn-primary sign-in">logout</button>
+      </p>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
